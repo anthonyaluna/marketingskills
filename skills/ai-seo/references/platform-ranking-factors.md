@@ -113,6 +113,18 @@ Claude uses Brave Search as its search backend when web search is enabled — no
 
 ---
 
+## Meta AI & Social Search (Entity-First AEO)
+
+Meta AI Search (spanning Instagram, Facebook, Facebook Groups, Threads, and WhatsApp) resolves high-intent conversational queries (*"quiet pet-friendly apartment near Cedars-Sinai with gated parking"* or *"commercial property manager in Southern California for multi-tenant industrial"*) by indexing **Entity Density** across captions, OCR slide/video text, spoken audio transcripts, and comment threads.
+
+**What makes Social AEO different:** Legacy classified-style or vague promotional posts fail retrieval because they lack named real-world entities. Posts engineered for **Semantic Qualification** win both social feed discovery and AI answer citations:
+- **Micro-Geographic Specificity:** Pair city names with exact neighborhood/corridor names (e.g., *Sunset Park, Santa Monica* or *Vista Del Oro, San Pedro*) and named anchor landmarks (*Cedars-Sinai*, *Murrieta Innovation Center*).
+- **Explicit Numeric & Attribute Entities:** State concrete specs, square footage, Walk/Bike scores, pricing transparency (avoid *"DM for price"*), and high-intent operational attributes directly in text.
+- **Tri-Modal Alignment:** Repeat primary entities across spoken audio, burned-in on-screen text, and caption copy.
+- **Canonical Web + Social Loop:** Pair social posts with a canonical AEO web page containing a **60-word direct answer snippet** at the top, **8 self-contained 40–60 word FAQ passages**, and `Article` + `FAQPage` JSON-LD schema.
+
+---
+
 ## Allowing AI Bots in robots.txt
 
 If your robots.txt blocks an AI bot, that platform can't cite your content. Here are the user agents to allow:
@@ -140,7 +152,7 @@ If you're optimizing for AI search for the first time, focus your effort where y
 
 **Then address ChatGPT** — It's the most-used standalone AI search tool for tech and business audiences. Focus on freshness (update content monthly), domain authority, and matching your content structure to how ChatGPT formats its responses.
 
-**Then expand to Perplexity** — Especially valuable if your audience includes researchers, early adopters, or tech professionals. Add FAQ schema, publish PDF resources, and write in clear, self-contained paragraphs.
+**Then expand to Perplexity & Meta Social AEO** — Add FAQ schema, publish PDF resources, write self-contained 40–60 word answer passages, and maximize Entity Density across LinkedIn carousels, Instagram/TikTok Tri-Modal videos, and Facebook community posts.
 
 **Copilot and Claude are lower priority** unless your audience skews enterprise/Microsoft (Copilot) or developer/analyst (Claude). But the fundamentals — structured content, cited sources, schema markup — help across all platforms.
 
@@ -149,6 +161,6 @@ If you're optimizing for AI search for the first time, focus your effort where y
 2. Implement schema markup (FAQPage, Article, Organization at minimum)
 3. Include statistics with named sources in your content
 4. Update content regularly — monthly for competitive topics
-5. Use clear heading structure (H1 > H2 > H3)
+5. Use clear heading structure (H1 > H2 > H3) with a 60-word direct answer snippet
 6. Keep page load time under 2 seconds
 7. Add author bios with credentials

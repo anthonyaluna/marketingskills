@@ -208,30 +208,26 @@ Best for: Relatable content, humor, niche communities
 
 ---
 
-## Analytics & Iteration
+## 2026 Retention Benchmarks, Drop-Off Triage & Tri-Modal SEO
 
-### Metrics That Matter
+### Quantitative Retention Gates
 
-| Metric | What It Tells You |
-|--------|-------------------|
-| Watch time % | Is content engaging throughout? |
-| Completion rate | Did hook + content deliver? |
-| Saves | Is content valuable enough to revisit? |
-| Shares | Is content worth spreading? |
-| Comments | Did content spark conversation? |
-| Follows | Did viewer want more from you? |
+| Metric | 2026 Breakout Target | What It Signals |
+|--------|----------------------|-----------------|
+| **3-Second Hold / Viewed vs. Swiped Away** | `>= 65%` (IG/TikTok) / `>= 75%` (Shorts) | Did Frame 1 + verbal hook arrest the scroll? |
+| **Completion Rate (`20–38s` clip)** | `>= 70%` (TikTok FYF gate) / `>= 65%` (Reels) | Primary cohort graduation gate (`200 -> 10k -> 100k+`) |
+| **DM Sends / Shares per Reach** | `>= 1.5%` | #1 Unconnected non-follower expansion multiplier |
+| **Saves / Collects per Reach** | `>= 2.0%` | #1 Connected Feed & Search authority signal |
 
-### What to Test
+### Retention Curve Drop-Off Triage
 
-1. **Hooks**: Same content, different opening
-2. **Length**: 15 sec vs 30 sec vs 60 sec
-3. **Format**: Talking head vs slideshow vs demo
-4. **Time**: Morning vs afternoon vs evening
-5. **CTA**: Different calls to action
+- **0–3s Cliff (`3s Hold < 62%`):** Cut the first 1.5s of setup/throat-clearing, place a `6–8` word outcome/contrarian headline on Frame 1, and start mid-action.
+- **Mid-Video Bleed (`3s–15s Drop > 25 pts`):** Enforce a **3–5 second visual reset** (B-roll insert, chart callout, punch-in crop, or subtitle color shift every 3–5 seconds).
+- **Pre-End Bailout (`Final 3s Drop > 18 pts`):** Eliminate sign-off phrases (*"Thanks for watching"*). End on an incomplete clause that grammatically bridges back into Second `0.0` (**Seamless Loop Bridge**) to push completion past `100%`.
 
-### When to Pivot
+### Tri-Modal Video Search SEO
 
-- 5+ videos with <1% completion rate → change hooks
-- High views but low follows → check CTA and content-audience fit
-- High saves but low shares → content is valuable but not social
-- Lots of comments but negative → lean into controversy or adjust tone
+Align the exact target search phrase across all three indexing layers in the first 4 seconds:
+1. **Spoken Audio** (ASR transcript index)
+2. **Burned-In On-Screen Text** (OCR computer-vision index)
+3. **First 125 Characters of Caption** + `3–5` niche hashtags (never exceed 5 hashtags on IG/TikTok; zero third-party watermarks)

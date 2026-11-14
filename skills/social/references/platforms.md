@@ -1,170 +1,106 @@
-# Platform-Specific Strategy Guide
+# Platform-Specific Strategy & 2026 Algorithm Matrices
 
-Detailed strategies for each major social platform.
+Quantitative ranking signals, format multipliers, and penalties across every major social platform in 2026.
 
 ## Contents
-- LinkedIn
-- Twitter/X
-- Instagram
-- TikTok
-- Facebook
-
-## LinkedIn
-
-**Best for:** B2B, thought leadership, professional networking, recruiting
-**Audience:** Professionals, decision-makers, job seekers
-**Posting frequency:** 3-5x per week
-**Best times:** Tuesday-Thursday, 7-8am, 12pm, 5-6pm
-
-**What works:**
-- Personal stories with business lessons
-- Contrarian takes on industry topics
-- Behind-the-scenes of building a company
-- Data and original insights
-- Carousel posts (document format)
-- Polls that spark discussion
-
-**What doesn't:**
-- Overly promotional content
-- Generic motivational quotes
-- Links in the main post (kills reach)
-- Corporate speak without personality
-
-**Format tips:**
-- First line is everything (hook before "see more")
-- Use line breaks for readability
-- 1,200-1,500 characters performs well
-- Put links in comments, not post body
-- Tag people sparingly and genuinely
-
-**Algorithm tips:**
-- First hour engagement matters most
-- Comments > reactions > clicks
-- Dwell time (people reading) signals quality
-- No external links in post body
-- Document posts (carousels) get strong reach
-- Polls drive engagement but don't build authority
+- LinkedIn (360Brew Semantic Dwell & Topic Authority)
+- Twitter/X (Grok / Heavy Ranker Conversation & Dwell)
+- Instagram (Dual-Mode Connected vs. Unconnected Ranking)
+- TikTok (FYF 70% Completion Gate & Tri-Modal SEO)
+- Facebook (Andromeda AI Discovery & 3-Tier Group AEO)
+- YouTube (Shorts Viewed-vs-Swiped-Away & Long-Form Satisfaction)
 
 ---
 
-## Twitter/X
+## LinkedIn (2026 360Brew Engine)
 
-**Best for:** Tech, media, real-time commentary, community building
-**Audience:** Tech-savvy, news-oriented, niche communities
-**Posting frequency:** 3-10x per day (including replies)
-**Best times:** Varies by audience; test and measure
+**Best for:** B2B authority, executive thought leadership, high-ticket inbound pipeline
+**Posting frequency:** 3–5x per week
+**Best times:** Tuesday–Thursday, 7:30–9:00 AM and 12:00 PM local audience time
 
-**What works:**
-- Hot takes and opinions
-- Threads that teach something
-- Behind-the-scenes moments
-- Engaging with others' content
-- Memes and humor (if on-brand)
-- Real-time commentary on events
+**2026 Signal Weights:**
+- **Dwell Time & "See More" Expansion (32%):** Reading depth and swipe-through time on multi-slide PDFs.
+- **Substantive Threaded Comments (28%):** Comments of 15+ words and multi-turn author replies in the first 60 minutes.
+- **Semantic Topic Authority (20%):** 360Brew classifies accounts into 2–3 core expertise pillars; off-pillar filler dilutes distribution.
+- **Saves & Reposts with Commentary (13%):** High-intent reference bookmarking.
+- **Reactions / Likes (7%):** Lowest-tier passive signal.
 
-**What doesn't:**
-- Pure self-promotion
-- Threads without a strong hook
-- Ignoring replies and mentions
-- Scheduling everything (no real-time presence)
-
-**Format tips:**
-- Tweets under 100 characters get more engagement
-- Threads: Hook in tweet 1, promise value, deliver
-- Quote tweets with added insight beat plain retweets
-- Use visuals to stop the scroll
-
-**Algorithm tips:**
-- Replies and quote tweets build authority
-- Threads keep people on platform (rewarded)
-- Images and video get more reach
-- Engagement in first 30 min matters
-- Twitter Blue/Premium may boost reach
+**Format Multipliers & Penalties:**
+- **PDF Document Carousels (8–12 slides, 1080×1350):** `1.34x` dwell multiplier (one concise thesis/visual per slide).
+- **Native Vertical Video (30–75s with burned-in captions):** `1.14x`.
+- **Outbound URL in Post Body:** `0.60x` reach suppression — always isolate external links to the first comment.
+- **AI Slop & LinkedIn Clichés:** `0.70x` classifier demotion for generic openings (*"In today's fast-paced world"*, *"Thrilled to announce"*, *"Humbled and honored"*).
+- **Engagement Bait:** `0.55x` demotion (*"Comment YES below"*); close with a genuine practitioner trade-off question instead.
 
 ---
 
-## Instagram
+## Twitter/X (2026 Grok & Heavy Ranker)
 
-**Best for:** Visual brands, lifestyle, e-commerce, younger demographics
-**Audience:** 18-44, visual-first consumers
-**Posting frequency:** 1-2 feed posts per day, 3-10 Stories per day
-**Best times:** 11am-1pm, 7-9pm
+**Best for:** Real-time industry thesis testing, founder authority, high-velocity debate
+**Posting frequency:** 2–5 root posts + 10–15 substantive replies per day
 
-**What works:**
-- High-quality visuals
-- Behind-the-scenes Stories
-- Reels (short-form video)
-- Carousels with value
-- User-generated content
-- Interactive Stories (polls, questions)
+**2026 Heavy Ranker Relative Weights:**
+- **Author-Engaged Conversation Replies (`~75x` vs. Like):** When a viewer replies AND the author responds constructively in-thread.
+- **Direct Replies (`~13.5x–27x`):** Multi-turn thread depth.
+- **Bookmarks (`~20x`) & Retweets/Quotes (`~20x`):** Private save-for-later and graph-bridging commentary.
+- **2+ Minute Thread / X Article / Video Dwell (`~10x–11x`):** Time spent expanded on the post.
+- **Negative Feedback (`-74x` to `-369x`):** Mutes, blocks, "Not interested", and reports catastrophically tank account reputation (`Tweepcred`).
 
-**What doesn't:**
-- Low-quality images
-- Too much text in images
-- Ignoring Stories and Reels
-- Only promotional content
-
-**Format tips:**
-- Reels get 2x reach of static posts
-- First frame of Reels must hook
-- Carousels: 10 slides with educational content
-- Use all Story features (polls, links, etc.)
-
-**Algorithm tips:**
-- Reels heavily prioritized over static posts
-- Saves and shares > likes
-- Stories keep you top of feed
-- Consistency matters more than perfection
-- Use all features (polls, questions, etc.)
+**Format & Penalty Rules:**
+- **Long-form single posts (180–600 words) & tight 4–7 post threads** outperform sub-100-character throwaway tweets on dwell and bookmarks.
+- **External Links in Root Post:** `0.45x` reach penalty for non-media outbound URLs — put links in reply `#2` after initial engagement velocity.
+- **Hashtag Cap:** Use `0–2` tags maximum; `3+` hashtags trigger spam/bot heuristics.
 
 ---
 
-## TikTok
+## Instagram (2026 Dual-Mode Ranking)
 
-**Best for:** Brand awareness, younger audiences, viral potential
-**Audience:** 16-34, entertainment-focused
-**Posting frequency:** 1-4x per day
-**Best times:** 7-9am, 12-3pm, 7-11pm
+Instagram operates **two distinct ranking engines** (confirmed by Adam Mosseri):
+1. **Connected Reach (Followers Feed):** Prioritizes **Saves per Reach (`28%`)**, Watch Time (`30%`), DM Sends (`22%`), Comments (`12%`), Likes (`8%`).
+2. **Unconnected Reach (Reels Tab & Explore — Non-Followers):** Prioritizes **Watch Time / Completion (`38%`)**, **DM Sends / Shares per Reach (`34%`)**, Saves (`14%`), Profile Taps (`9%`), Likes (`5%`).
 
-**What works:**
-- Native, unpolished content
-- Trending sounds and formats
-- Educational content in entertaining wrapper
-- POV and day-in-the-life content
-- Responding to comments with videos
-- Duets and stitches
-
-**What doesn't:**
-- Overly produced content
-- Ignoring trends
-- Hard selling
-- Repurposed horizontal video
-
-**Format tips:**
-- Hook in first 1-2 seconds
-- Keep it under 30 seconds to start
-- Vertical only (9:16)
-- Use trending sounds
-- Post consistently to train algorithm
+**2026 Execution Rules:**
+- **Trial Reels SOP:** Stage bold new video hooks as **Trial Reels** (shown exclusively to non-followers first). Graduate to the main follower grid only when 24h 3s hold `>= 62%` and Sends/Reach `>= 1.5%`.
+- **4:5 Carousels (7–10 slides, mixed photo + video slides):** Eligible for Instagram's **Second-Chance Re-Serve** (automatically re-shown on Slide 2 to followers who scrolled past Slide 1) and now eligible for Explore when paired with audio.
+- **Strict Penalties:**
+  - **Reels > 180 seconds:** Excluded from non-follower Explore/Reels recommendation pools (`0.55x`). Keep growth Reels `18–45s` and authority Reels `45–90s`.
+  - **> 5 Hashtags:** Official 5-hashtag limit (`0.82x` penalty if exceeded); front-load natural SEO keywords in the first 125 characters.
+  - **Third-Party Watermarks (TikTok/CapCut):** `0.45x` Originality Score demotion.
 
 ---
 
-## Facebook
+## TikTok (2026 FYF & Tri-Modal Search SEO)
 
-**Best for:** Communities, local businesses, older demographics, groups
-**Audience:** 25-55+, community-oriented
-**Posting frequency:** 1-2x per day
-**Best times:** 1-4pm weekdays
+**2026 For You Feed (FYF) Signal Weights:**
+- **Completion Rate (`>= 70%` Gate) & Rewatches (`48%` combined):** Primary cohort graduation gate (`200 -> 1,000 -> 10,000 -> 100k+` views).
+- **Shares / Reposts (`22%`, `~6x` Like):** Strongest off-feed intent signal.
+- **Saves / Collects (`18%`, `~5x` Like):** Powers long-tail TikTok Search ranking.
+- **Search / Profile Tap-Through (`8%`) & Likes (`4%`).**
 
-**What works:**
-- Facebook Groups (community)
-- Native video
-- Live video
-- Local content and events
-- Discussion-prompting questions
+**Tri-Modal Search SEO Rule (`1.18x` discovery lift):**
+Align the exact target search phrase across all three indexing layers in the first 3–5 seconds:
+1. **Spoken Audio** (ASR transcript)
+2. **On-Screen Burned-In Text** (OCR vision index)
+3. **Caption + `3–5` Niche Hashtags** (max 5 tags since Aug 2025)
 
-**What doesn't:**
-- Links to external sites (reach killer)
-- Pure promotional content
-- Ignoring comments
-- Cross-posting from other platforms without adaptation
+**Sweet Spot:** `24–38s` for high-completion loops or `45–75s` for Search-indexed storytelling (`<7s` micro-clips have capped FYF credit).
+
+---
+
+## Facebook (2026 Andromeda AI & 3-Tier Group AEO)
+
+**Feed & Reels Discovery:** Over 50% of Feed inventory is AI-recommended unconnected Reels and Group discussions weighted by **Watch Retention (`32%`)**, **Messenger/WhatsApp Shares (`28%`)**, and **Multi-Turn Comment Threads (`20%`)**. Outbound links in post bodies suffer severe reach suppression (`0.50x`); place links in the first comment.
+
+**3-Tier Facebook Group & Social AEO Playbook:**
+1. **Tier 1 — High-Velocity Marketplaces:** Use visual pattern interrupts, transparent pricing/specs (never *"DM for price"*, which triggers scam skepticism), and raw walkthrough videos.
+2. **Tier 2 — Moderated Community & Lifestyle Groups:** Use the **"Trojan Horse" Value/Question Frame** — ask a genuine local decision question or share a neighborhood insight rather than posting an ad.
+3. **Tier 3 — Niche Professional & Chamber Networks:** Position around business outcomes, local anchors, and partnerships.
+4. **Entity-First Social AEO:** Name specific micro-neighborhoods, nearby anchor landmarks, and concrete numeric specs so Meta AI Search cites the post as a direct answer.
+5. **Comment-to-Rank Protocol:** End with a specific preference question and reply to **100% of comments within 2 hours** to sustain group/feed ranking velocity.
+
+---
+
+## YouTube (Shorts & Long-Form Satisfaction)
+
+- **Shorts:** Must clear **`>= 75%` Viewed vs. Swiped Away** (first 3 seconds) and **`90–115%` Average Percentage Viewed** (via seamless ending-to-opening sentence loop bridges).
+- **Long-Form:** Driven by Impression CTR (`6.5%+`), Average View Duration (`50%+` of runtime), post-watch satisfaction surveys, and **Session Watch Continuation** (chaining viewers to a next video via pinned playlist/end-screen).

@@ -231,37 +231,39 @@ Extract "content atoms" — self-contained moments from any long-form content th
 
 ---
 
-## Analytics & Optimization
+## Analytics, 2026 Algorithm Calibration & Optimization
 
-### Metrics That Matter
+### High-Weight 2026 Signals That Actually Drive Reach
 
-**Awareness:** Impressions, Reach, Follower growth rate
+Likes and raw follower counts are legacy vanity metrics. Optimize for platform-weighted **Algorithmic Value Score (AVS)** drivers:
 
-**Engagement:** Engagement rate, Comments (higher value than likes), Shares/reposts, Saves
+| Platform | #1 Primary Gate | #2 Expansion Catalyst | Reach Killers to Eliminate |
+|----------|----------------|----------------------|----------------------------|
+| **Instagram** | Watch Completion (`>=65%`) | **DM Sends/Reach** (`>=1.5%` Unconnected) & **Saves/Reach** (`>=2.0%` Connected) | Reels `>180s`, `>5` hashtags, TikTok/CapCut watermarks |
+| **LinkedIn (360Brew)** | **Dwell Time** (8–12 slide PDF Carousels) | **Substantive Comments** (`15+` words in first 60m) | External URLs in post body (`0.60x`), AI clichés, engagement bait |
+| **TikTok** | **70% Completion Gate** & Rewatches | **Shares + Saves** (`>=3%` per play) + **Tri-Modal SEO** | `>5` hashtags, slow 3s intros, watermarked reposts |
+| **Twitter/X** | **Author-Engaged Replies** (`~75x` Like) | **Bookmarks** (`~20x` Like) & 2m+ Thread Dwell | Outbound URLs in root post (`0.45x`), `3+` hashtags |
+| **Facebook** | Watch Time & **Messenger Shares** | **Comment-to-Rank** (`<2h` reply SLA) & **Entity-Dense AEO** | External links in body (`0.50x`), *"DM for price"* scam triggers |
+| **YouTube** | **Viewed vs. Swiped Away (`>=75%`)** | Loop APV (`95%+` Shorts) / Session Continuation (Long) | Clickbait title-to-opening mismatch |
 
-**Conversion:** Link clicks, Profile visits, DMs received, Leads attributed
+### Pre-Publish QA & Trial Reel Protocol
 
-### Weekly Review
-
-- Top 3 performing posts (why did they work?)
-- Bottom 3 posts (what can you learn?)
-- Follower growth trend
-- Engagement rate trend
-- Best posting times (from data)
+1. **Pre-Publish Readiness Check:** Verify hook length (`<=12` words before truncation), zero outbound links in root body (move to first comment), compliance disclaimers on regulated topics, and explicit ICP alignment.
+2. **Instagram Trial Reels Testing:** Publish bold new hooks as **Trial Reels** (non-followers only) first. Graduate to the main follower grid when 24-hour 3-second hold `>=62%` and Sends/Reach `>=1.5%`.
+3. **Multi-Year Historical Calibration:** When Meta, LinkedIn (`.xlsx`/`.csv`), and Metricool exports are available, compute Empirical Bayes lifts by format, hook archetype, and UTC publish hour (`2025–2026` regime weighted `2x` over `2021–2024`).
+4. **Metricool Batch Scheduling:** Export weekly pillar calendars to Metricool Bulk CSV (`Text,Date,Time,Network,...`), keeping native comment-reply blocks open for the first 30–120 minutes post-publish.
 
 ### Optimization Actions
 
-**If engagement is low:**
-- Test new hooks
-- Post at different times
-- Try different formats
-- Increase engagement with others
+**If non-follower reach is low:**
+- Add a specific DM-share catalyst (*"Send this to an operator/partner navigating X"*)
+- Shorten video runtime into the `22–38s` completion sweet spot with a seamless loop bridge
+- Align spoken words, burned-in OCR text, and caption around the exact target search phrase (Tri-Modal SEO)
 
-**If reach is declining:**
-- Avoid external links in post body
-- Increase posting frequency
-- Engage more in comments
-- Test video/visual content
+**If follower engagement or inbound leads are low:**
+- Convert list/framework text posts into 8–10 slide `1080×1350` carousels to multiply dwell and saves
+- Remove external links from post bodies and place them in Comment `#1`
+- Increase entity specificity (named neighborhoods, metrics, case benchmarks) to attract ICP buyers and repel low-fit prospects
 
 ---
 
