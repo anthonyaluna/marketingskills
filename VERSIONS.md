@@ -6,7 +6,7 @@ Current versions of all skills. Agents can compare against local versions to che
 |-------|---------|--------------|
 | ab-testing | 2.0.0 | 2026-05-05 |
 | ad-creative | 2.8.0 | 2026-07-14 |
-| ai-seo | 2.2.0 | 2026-07-09 |
+| ai-seo | 2.3.0 | 2026-11-16 |
 | analytics | 2.0.1 | 2026-07-22 |
 | aso | 2.0.0 | 2026-05-05 |
 | attribution | 1.1.0 | 2026-07-23 |
@@ -51,10 +51,15 @@ Current versions of all skills. Agents can compare against local versions to che
 | signup | 2.0.0 | 2026-05-05 |
 | site-architecture | 2.0.0 | 2026-05-05 |
 | sms | 1.0.0 | 2026-05-21 |
-| social | 2.2.0 | 2026-07-09 |
+| social | 2.3.0 | 2026-11-16 |
 | video | 2.1.0 | 2026-07-14 |
 
 ## Recent Changes
+
+### 2.10.1 (2026-11-16)
+
+- **social 2.3.0:** Add supplied 2026 AVS matrices, Trial Reels protocol, retention triage, and Tri-Modal SEO guidance.
+- **ai-seo 2.3.0:** Add Meta Social AEO and entity-first social search guidance.
 
 ### 2.10.0 (2026-07-22)
 
