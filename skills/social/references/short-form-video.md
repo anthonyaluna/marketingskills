@@ -146,7 +146,7 @@ Best for: Relatable content, humor, niche communities
 
 ### B-Roll Heavy
 - Show don't tell
-- Quick cuts (1-3 seconds per shot)
+- Cut when the action, information, or perspective changes. Use the applicable editor-seat cadence as a review target, with documented continuous-shot exceptions.
 - Match cuts to voiceover beats
 - Mix wide, medium, and close-up shots
 
@@ -208,30 +208,33 @@ Best for: Relatable content, humor, niche communities
 
 ---
 
-## Analytics & Iteration
+## v2026.11 Retention Targets, Triage and Tri-Modal SEO
 
-### Metrics That Matter
+These are **user-supplied editorial targets**, not official platform gates or measured universal breakout thresholds. See [platform policy](platforms.md) for exact weights, modifiers, and the separate Trial Reel graduation rule.
 
-| Metric | What It Tells You |
-|--------|-------------------|
-| Watch time % | Is content engaging throughout? |
-| Completion rate | Did hook + content deliver? |
-| Saves | Is content valuable enough to revisit? |
-| Shares | Is content worth spreading? |
-| Comments | Did content spark conversation? |
-| Follows | Did viewer want more from you? |
+| Platform | Opening metric target | Completion target | Working duration |
+| --- | --- | --- | --- |
+| Instagram Reels | Three-second hold >=68% | >=65% | 18–65s |
+| TikTok | Three-second hold >=72% | >=70% | 15–55s core, 62–110s deep story |
+| Facebook Reels | Three-second hold >=65% | >=58% | 20–90s |
+| YouTube Shorts | Viewed-vs-swiped >=76% | Completion efficiency >=82%, with its actual definition recorded | 18–35s |
 
-### What to Test
+Instagram policy targets sends/reach >=2.5% and saves/reach >=3.0%. Do not substitute shares/views for either. Its custom Trial Reel gate is lower and separate: **24-hour non-follower three-second hold >=62% AND DM sends/reach >=1.5%**. Missing cohort-specific metrics or an unavailable denominator keeps the gate Pending. An internal target does not guarantee promotion or non-follower reach.
 
-1. **Hooks**: Same content, different opening
-2. **Length**: 15 sec vs 30 sec vs 60 sec
-3. **Format**: Talking head vs slideshow vs demo
-4. **Time**: Morning vs afternoon vs evening
-5. **CTA**: Different calls to action
+### Retention triage
 
-### When to Pivot
+- **0–3s drop:** inspect Frame 1 and source sound. Remove avoidable setup, clarify the promise, or start at the event. Compare the actual retention curve with the relevant platform target. Do not blindly remove 1.5 seconds from every clip.
+- **Mid-video drop:** find the point where the story stops advancing. For the Coastline editor-seat profile, review a purposeful visual or B-roll shift every **3–5s**. Cuts should reveal information, not hide the lack of a story. Record an intentional continuous-shot exception rather than claiming the criterion passed.
+- **Pre-end drop:** deliver the promised payoff, remove redundant sign-offs, and consider an ending that connects naturally to the opening. A coherent **Loop Bridge** is a policy preference, not a reason to withhold the answer.
+- Replays can increase average percentage viewed above 100%. They cannot make the fraction of viewers who completed a video exceed 100%. Keep completion, average percentage viewed, and loop rate separate.
+- No full playback: visual editing, audio clarity, timing, and retention predictions remain unreviewed. A transcript or contact sheet alone cannot pass the editor seat.
 
-- 5+ videos with <1% completion rate → change hooks
-- High views but low follows → check CTA and content-audience fit
-- High saves but low shares → content is valuable but not social
-- Lots of comments but negative → lean into controversy or adjust tone
+### Tri-Modal search alignment
+
+For spoken TikTok content, align the same truthful target phrase across **spoken audio at 0–3s**, readable on-screen text, and caption. Keep **3–5** relevant niche tags and avoid `#fyp` and `#viral`. A relevant phrase should sound natural in all three places. The supplied alignment modifier is **1.20x**, loop bridge **1.15x**, slow three-second opening **0.58x**; each is an editorial assumption, not observed lift.
+
+Do not describe the alignment as proof of a platform OCR/ASR ranking formula. A silent cinematic clip can be suitable without earning the spoken-audio criterion. Never add false location, amenity, result, or identity claims to improve a score.
+
+### Production receipt
+
+Keep source files and selected time ranges, actual runtime, aspect ratio, captions, source/music rights, audio mix, watermark review, and mobile preview. Recheck legal claims and location details against current primary sources when applicable. Planning a distribution package does not publish it.

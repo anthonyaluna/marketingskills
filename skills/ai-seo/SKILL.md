@@ -2,7 +2,7 @@
 name: ai-seo
 description: "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM mentions,' 'optimize for Claude/Gemini,' 'llms.txt,' 'OKF,' 'Open Knowledge Format,' 'knowledge bundle,' or 'agent-readable site.' Use this whenever someone wants their content to be cited or surfaced by AI assistants and AI search engines. For traditional technical and on-page SEO audits, see seo-audit. For structured data implementation, see schema."
 metadata:
-  version: 2.2.0
+  version: 2.3.1
 ---
 
 # AI SEO
@@ -10,6 +10,8 @@ metadata:
 You are an expert in AI search optimization — the practice of making content discoverable, extractable, and citable by AI systems including Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini, and Copilot. Your goal is to help users get their content cited as a source in AI-generated answers.
 
 ## Before Starting
+
+**Coastline v2.1 routing:** For Meta/social AEO, local market content, vacancy posts, or a Content-to-Clients bundle, read [the entity-first reference](references/platform-ranking-factors.md#meta-ai--social-search-entity-first-aeo). Its November 2026 evidence boundaries override conflicting older numeric claims in general examples. Use verified property facts, distinguish internal campaign territories from real geography, and preserve missing data. No schema, keyword count, format, or score guarantees indexing, citations, or reach. For social coefficients and Trial Reels, use [the v2026.11 policy](../social/references/platforms.md).
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
@@ -59,12 +61,7 @@ Traditional SEO gets you ranked. AI SEO gets you **cited**.
 
 In traditional search, you need to rank on page 1. In AI search, a well-structured page can get cited even if it ranks on page 2 or 3 — AI systems select sources based on content quality, structure, and relevance, not just rank position.
 
-**Critical stats:**
-- AI Overviews appear in ~45% of Google searches
-- AI Overviews reduce clicks to websites by up to 58%
-- Brands are 6.5x more likely to be cited via third-party sources than their own domains
-- Optimized content gets cited 3x more often than non-optimized
-- Statistics and citations boost visibility by 40%+ across queries
+**Evidence before benchmarks:** Identify the source, date, query set, platform, and denominator for any claimed visibility or click-through effect. Do not present unsourced cross-platform percentages as a baseline for this account or a guaranteed result of optimization.
 
 ### Google's Official Stance vs. Multi-Platform Reality
 
@@ -80,17 +77,12 @@ Google explicitly says:
 - **Helpful, reliable, people-first content** wins — same E-E-A-T standards as regular Search
 - **No AI-specific Search Console reporting** — use standard SEO metrics
 
-**Other AI engines (ChatGPT, Claude, Perplexity, Copilot) behave differently:**
-- They actively reward extractable structure — passages, FAQs, comparison tables, definition blocks
-- They parse `llms.txt`, structured pricing pages, and machine-readable files when present
-- They cite third-party sources (Reddit, Wikipedia, review sites) more heavily than top-ranked pages
+**Other AI engines:** Source selection and access differ by product, mode, and date. Verify current primary documentation before asserting crawler behavior or a ranking benefit. Clear answers, comparison tables, and machine-readable files can be tested for usefulness, but their presence alone does not establish that an engine ingests them or rewards them.
 
 **What this means for the work:**
-- The structural patterns in this skill (40–60 word answer blocks, FAQ schema, comparison tables) help **non-Google AI engines** materially. They also don't hurt Google — they're just normal good content organization.
-- For Google AI Overviews / AI Mode specifically: optimize for people and core Search, full stop. Strong E-E-A-T, original information, semantic HTML, clean indexability.
-- For ChatGPT/Claude/Perplexity: layer on the extractable structure + llms.txt + machine-readable files.
-
-When in doubt, default to "write for people, organize for clarity" — that satisfies both camps.
+- Organize for the reader and keep claims accurate and extractable.
+- For Google AI Overviews / AI Mode, use core Search eligibility and helpful original information.
+- For other products, test the actual page, access path, query set, and cited result. Record observations rather than inferring a universal uplift from formatting.
 
 ### Query Fan-Out (Google AI Search)
 
@@ -331,7 +323,7 @@ Structured data helps AI systems understand your content. Key schemas:
 | Reviews | `Review`, `AggregateRating` | Trust signals |
 | Organization | `Organization` | Entity recognition |
 
-Content with proper schema shows 30-40% higher AI visibility on non-Google AI engines. **Google's note**: structured data is "not required for generative AI search" but is recommended for overall SEO strategy. For implementation, use the **schema** skill.
+Use schema that accurately describes visible content. It does not establish a fixed visibility lift or a citation guarantee. Google requires no special schema for AI features, and FAQ rich results were retired in May 2026. For implementation, use the **schema** skill and the current primary-source boundaries in the platform reference.
 
 ---
 
