@@ -6,7 +6,7 @@ Current versions of all skills. Agents can compare against local versions to che
 |-------|---------|--------------|
 | ab-testing | 2.0.0 | 2026-05-05 |
 | ad-creative | 2.8.0 | 2026-07-14 |
-| ai-seo | 2.3.0 | 2026-11-16 |
+| ai-seo | 2.3.1 | 2026-11-17 |
 | analytics | 2.0.1 | 2026-07-22 |
 | aso | 2.0.0 | 2026-05-05 |
 | attribution | 1.1.0 | 2026-07-23 |
@@ -51,10 +51,15 @@ Current versions of all skills. Agents can compare against local versions to che
 | signup | 2.0.0 | 2026-05-05 |
 | site-architecture | 2.0.0 | 2026-05-05 |
 | sms | 1.0.0 | 2026-05-21 |
-| social | 2.3.0 | 2026-11-16 |
+| social | 2.3.1 | 2026-11-17 |
 | video | 2.1.0 | 2026-07-14 |
 
 ## Recent Changes
+
+### 2.10.2 (2026-11-17)
+
+- **social 2.3.1:** Align all AVS coefficients and format/retention targets to supplied v2026.11 policy, separate editorial scores from observed metrics, and make Trial Reel graduation Pending when required cohort metrics are unavailable.
+- **ai-seo 2.3.1:** Expand the SoCal entity campaign clusters and group-distribution workflow with sourced property facts, honest geographic labels, and current FAQ / AI search limitations.
 
 ### 2.10.1 (2026-11-16)
 

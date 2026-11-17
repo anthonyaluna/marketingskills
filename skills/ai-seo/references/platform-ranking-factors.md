@@ -27,7 +27,7 @@ Google AI Overviews pull from Google's own index and lean heavily on E-E-A-T sig
 **Importantly, AI Overviews don't just recycle the traditional Top 10.** Only about 15% of AI Overview sources overlap with conventional organic results. Pages that wouldn't crack page 1 in traditional search can still get cited if they have strong structured data and clear, extractable answers.
 
 **What to focus on:**
-- Schema markup is the single biggest lever — Article, FAQPage, HowTo, and Product schemas give AI Overviews structured context to work with (30-40% visibility boost)
+- Use structured data that accurately describes visible content. Do not promise a fixed visibility boost. Google requires no special schema for AI features; see the current primary-source boundaries below.
 - Build topical authority through content clusters with strong internal linking
 - Include named, sourced citations in your content (not just claims)
 - Author bios with real credentials matter — E-E-A-T is weighted heavily
@@ -66,14 +66,14 @@ Perplexity always cites its sources with clickable links, making it the most tra
 **What makes Perplexity different:** It's the most "research-oriented" AI search engine, and its citation behavior reflects that. Perplexity maintains curated lists of authoritative domains (Amazon, GitHub, major academic sites) that get inherent ranking boosts. It uses a time-decay algorithm that evaluates new content quickly, giving fresh publishers a real shot at citation.
 
 **Perplexity has unique content preferences:**
-- **FAQ Schema (JSON-LD)** — Pages with FAQ structured data get cited noticeably more often
+- **FAQ content** — Clear, self-contained answers can be evaluated for usefulness. FAQ markup alone does not establish a citation lift.
 - **PDF documents** — Publicly accessible PDFs (whitepapers, research reports) are prioritized. If you have authoritative PDF content gated behind a form, consider making a version public.
 - **Publishing velocity** — How frequently you publish matters more than keyword targeting
 - **Self-contained paragraphs** — Perplexity prefers atomic, semantically complete paragraphs it can extract cleanly
 
 **What to focus on:**
 - Allow PerplexityBot in robots.txt
-- Implement FAQPage schema on any page with Q&A content
+- Use FAQPage only for matching visible questions and answers, with the eligibility and no-guarantee limits below.
 - Host PDF resources publicly (whitepapers, guides, reports)
 - Add Article schema with publication and modification timestamps
 - Write in clear, self-contained paragraphs that work as standalone answers
@@ -115,13 +115,52 @@ Claude uses Brave Search as its search backend when web search is enabled — no
 
 ## Meta AI & Social Search (Entity-First AEO)
 
-Meta AI Search (spanning Instagram, Facebook, Facebook Groups, Threads, and WhatsApp) resolves high-intent conversational queries (*"quiet pet-friendly apartment near Cedars-Sinai with gated parking"* or *"commercial property manager in Southern California for multi-tenant industrial"*) by indexing **Entity Density** across captions, OCR slide/video text, spoken audio transcripts, and comment threads.
+**Scope:** the Coastline Equity v2.1 handoff's local content policy, dated November 17, 2026. Entity clarity is a useful editorial and retrieval hypothesis. It is not proof that Meta indexes every caption, private group, audio track, OCR surface, or comment, and it does not guarantee citations in Meta AI, Google AI Overviews, or Perplexity.
 
-**What makes Social AEO different:** Legacy classified-style or vague promotional posts fail retrieval because they lack named real-world entities. Posts engineered for **Semantic Qualification** win both social feed discovery and AI answer citations:
-- **Micro-Geographic Specificity:** Pair city names with exact neighborhood/corridor names (e.g., *Sunset Park, Santa Monica* or *Vista Del Oro, San Pedro*) and named anchor landmarks (*Cedars-Sinai*, *Murrieta Innovation Center*).
-- **Explicit Numeric & Attribute Entities:** State concrete specs, square footage, Walk/Bike scores, pricing transparency (avoid *"DM for price"*), and high-intent operational attributes directly in text.
-- **Tri-Modal Alignment:** Repeat primary entities across spoken audio, burned-in on-screen text, and caption copy.
-- **Canonical Web + Social Loop:** Pair social posts with a canonical AEO web page containing a **60-word direct answer snippet** at the top, **8 self-contained 40–60 word FAQ passages**, and `Article` + `FAQPage` JSON-LD schema.
+For a local market, leasing, or vacancy post, select **one relevant micro-neighborhood + a genuinely relevant anchor landmark + verified numeric or amenity details**. Describe their relationship accurately. A landmark name alone does not establish proximity, travel time, school eligibility, or an affiliation. Do not append all clusters as a keyword list.
+
+### Coastline territory clusters
+
+These are internal campaign groupings, not an authoritative geographical taxonomy. In particular, Carlsbad is in San Diego County and West Covina is in the San Gabriel Valley. Keep those real locations clear when using the handoff's broader “Inland Empire Commercial” campaign label.
+
+| Campaign cluster | Candidate neighborhood / corridor entities | Candidate anchor entities | Candidate Facebook groups to verify before use |
+| --- | --- | --- | --- |
+| Westside | Santa Monica, Sunset Park, West Hollywood, Robertson Blvd, Main Street, Ocean Park | Cedars-Sinai, Santa Monica College (SMC), Melrose, Beverly Center | Santa Monica Community; West Hollywood Rentals; Cedars-Sinai Housing; Travel Nurse Housing - Los Angeles |
+| South Bay & Harbor | San Pedro, Vista Del Oro, Redondo Beach, Riviera Village, Torrance, Long Beach, Wilmington, Palos Verdes, Gardena | Fort MacArthur, Port of Los Angeles, Los Angeles Air Force Base, Boys & Girls Club, Alta Vista, 405 / 110 Freeway | South Bay Parents; Redondo Beach Community; San Pedro CA Community; Los Angeles Air Force Base Housing |
+| Inland Empire Commercial and adjacent campaign territories | Murrieta, Temecula, Menifee, Wildomar, Lake Elsinore, Rancho Cucamonga, Carlsbad, West Covina, Foothill Blvd | Murrieta Innovation Center, Murrieta Hot Springs, I-15 Corridor, Victoria Gateway, Turnkey Clinic, 3PL / Logistics Hub | Murrieta/Wildomar Chamber of Commerce; Temecula Valley Entrepreneurs; Inland Empire Commercial Real Estate |
+
+Verify the actual landmark or business behind a candidate such as “Turnkey Clinic”, “Victoria Gateway”, or “3PL / Logistics Hub”. Generic descriptors are not established place entities. Resolve an exact site before claiming distance or adjacency.
+
+### High-intent attributes and evidence
+
+Useful attributes, when true: `Walk Score [N]`, `Bike Score [N]`, `[N] sq ft`, in-unit laundry, subterranean/gated parking, detached ADU, pet-friendly, turnkey, medical office, cold storage, conference facility, 24-hour access.
+
+- Verify scores with source and date. Verify dimensions, access, parking, pet terms, permitted use, and current availability against the property record. Do not infer them from neighboring listings or images.
+- State transparent rent/pricing and the relevant square footage, parking, and pet terms in a leasing post. Missing required facts means an incomplete draft, not permission to invent them or replace price with “DM for price”.
+- Keep location and property facts consistent across caption, spoken audio, on-screen text, and canonical page. Do not represent a drafted transcript as recorded speech.
+- Use commercial/portfolio context only where supported by the actual asset or audience. Entity relevance is more important than keyword count.
+
+### Three-tier Facebook group distribution
+
+1. **Tier 1, marketplaces:** clear property facts, transparent pricing, accurate photos or walkthroughs, and a legitimate next step.
+2. **Tier 2, community groups:** a useful corridor or market observation and a genuine question. Do not disguise commercial intent, fabricate local participation, or post raw listing spam. The handoff's “Trojan Horse” label is not permission for deception.
+3. **Tier 3, chamber / professional groups:** operational relevance, local evidence, and practitioner discussion.
+
+Group names above are supplied candidates, not verified current groups or posting authorization. Check existence, membership, rules, and fit before posting. The **two-hour comment reply SLA** is an internal service target requiring staffing and actual timestamps. It is not a proven ranking guarantee. Log missed targets and moderation exceptions honestly.
+
+### Canonical page and social connection
+
+For the requested five-asset operational bundle, prepare an **eight-section canonical page** with an opening answer of **no more than 60 words**, plus **eight self-contained Q&A entries of 40–60 words each**. This is the user's publishing format, not a search engine requirement. Preserve the same sourced story, metric definition, place, and date across assets.
+
+Generate valid `Article` and `FAQPage` JSON-LD only from the final visible content. The FAQ questions and answers must match the page. Validate JSON syntax and schema properties, and retain author/date/source provenance. Schema is not a substitute for accuracy or a promise of indexing.
+
+Google's official May 2026 update says FAQ rich results stopped appearing on **May 7, 2026**. `FAQPage` may still describe the content semantically, but do not promise Google FAQ rich-result eligibility or a citation boost. Google's AI-features guidance also says no special schema is required for AI Overviews / AI Mode and that indexing or serving is not guaranteed.
+
+### Primary sources checked November 17, 2026
+
+- [Google Search documentation updates](https://developers.google.com/search/updates): FAQ rich-results retirement, May 2026.
+- [Google AI features and your website](https://developers.google.com/search/docs/appearance/ai-features): ordinary search eligibility, no special AI schema, no guaranteed indexing or serving.
+- [Social AVS policy](../../social/references/platforms.md): exact user-supplied platform targets, measurement limits, and Trial Reel SOP. These are separate from verified search-engine behavior.
 
 ---
 
@@ -152,13 +191,13 @@ If you're optimizing for AI search for the first time, focus your effort where y
 
 **Then address ChatGPT** — It's the most-used standalone AI search tool for tech and business audiences. Focus on freshness (update content monthly), domain authority, and matching your content structure to how ChatGPT formats its responses.
 
-**Then expand to Perplexity & Meta Social AEO** — Add FAQ schema, publish PDF resources, write self-contained 40–60 word answer passages, and maximize Entity Density across LinkedIn carousels, Instagram/TikTok Tri-Modal videos, and Facebook community posts.
+**Then evaluate Perplexity and social search for the audience** — Write sourced, self-contained answers and relevant entity details across native assets. Treat citation and discovery effects as hypotheses to measure, not guaranteed consequences of schema or keyword density.
 
 **Copilot and Claude are lower priority** unless your audience skews enterprise/Microsoft (Copilot) or developer/analyst (Claude). But the fundamentals — structured content, cited sources, schema markup — help across all platforms.
 
 **Actions that help everywhere:**
 1. Allow all AI bots in robots.txt
-2. Implement schema markup (FAQPage, Article, Organization at minimum)
+2. Use valid structured data appropriate to the visible content, without assuming a universal minimum set or search appearance guarantee
 3. Include statistics with named sources in your content
 4. Update content regularly — monthly for competitive topics
 5. Use clear heading structure (H1 > H2 > H3) with a 60-word direct answer snippet

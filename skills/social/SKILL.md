@@ -2,7 +2,7 @@
 name: social
 description: "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms, or wants to do social listening and engagement triage. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' 'grow my following,' 'TikTok video,' 'Reels,' 'Shorts,' 'video script,' 'video hook,' 'short-form video,' 'create a reel,' 'social listening,' 'brand mentions,' 'competitor monitoring,' 'top posts to comment on,' 'find people asking for,' 'carousel,' 'slide-by-slide,' or 'document post.' Use this for social media content creation, repurposing, scheduling, short-form video scripting, and social listening. For broader content strategy, see content-strategy. For paid ads, see ad-creative. For earned media, see public-relations."
 metadata:
-  version: 2.3.0
+  version: 2.3.1
 ---
 
 # Social Content
@@ -231,39 +231,20 @@ Extract "content atoms" — self-contained moments from any long-form content th
 
 ---
 
-## Analytics, 2026 Algorithm Calibration & Optimization
+## Analytics, AVS Policy and Readiness
 
-### High-Weight 2026 Signals That Actually Drive Reach
+For the Coastline / Anthony Luna v2.1 workflow, read [platform policy v2026.11](references/platforms.md) before scoring. It is the authoritative coefficient reference for this handoff and replaces earlier conflicting numerical recommendations in this skill's general examples.
 
-Likes and raw follower counts are legacy vanity metrics. Optimize for platform-weighted **Algorithmic Value Score (AVS)** drivers:
+**Keep three evidence types separate:** editorial policy assumptions, observed platform metrics, and source-backed historical calibration. A 0–100 draft score is an editorial assessment, not a predicted reach outcome or official algorithm score. Preserve missing measurements as Pending. Never infer dwell, completion, or DM sends from raw likes or caption text.
 
-| Platform | #1 Primary Gate | #2 Expansion Catalyst | Reach Killers to Eliminate |
-|----------|----------------|----------------------|----------------------------|
-| **Instagram** | Watch Completion (`>=65%`) | **DM Sends/Reach** (`>=1.5%` Unconnected) & **Saves/Reach** (`>=2.0%` Connected) | Reels `>180s`, `>5` hashtags, TikTok/CapCut watermarks |
-| **LinkedIn (360Brew)** | **Dwell Time** (8–12 slide PDF Carousels) | **Substantive Comments** (`15+` words in first 60m) | External URLs in post body (`0.60x`), AI clichés, engagement bait |
-| **TikTok** | **70% Completion Gate** & Rewatches | **Shares + Saves** (`>=3%` per play) + **Tri-Modal SEO** | `>5` hashtags, slow 3s intros, watermarked reposts |
-| **Twitter/X** | **Author-Engaged Replies** (`~75x` Like) | **Bookmarks** (`~20x` Like) & 2m+ Thread Dwell | Outbound URLs in root post (`0.45x`), `3+` hashtags |
-| **Facebook** | Watch Time & **Messenger Shares** | **Comment-to-Rank** (`<2h` reply SLA) & **Entity-Dense AEO** | External links in body (`0.50x`), *"DM for price"* scam triggers |
-| **YouTube** | **Viewed vs. Swiped Away (`>=75%`)** | Loop APV (`95%+` Shorts) / Session Continuation (Long) | Clickbait title-to-opening mismatch |
+1. Identify platform, account, format, intended audience, and one primary outcome. For Coastline authority content, apply the supplied product-marketing context and its ICP / compliance / QA rules. Do not force personal travel and family material into an authority-post keyword quota.
+2. Score only evidenced dimensions and disclose coverage, applied modifiers, and meaningful limitations. Read the exact global penalties and platform-specific targets in the reference rather than substituting a likes-plus-comments formula.
+3. For an Instagram video, follow the reference's **Trial Reels SOP**: an authorized trial first, then the custom 24-hour non-follower hold **>=62% AND sends/reach >=1.5%** gate. Missing cohort-specific metrics means Pending, not automatic graduation. Disable platform auto-sharing when enforcing this custom gate.
+4. For historical exports, preserve source/account/time window/format, use documented compatible denominators, deduplicate platform objects, separate paid and collaborative distributions where known, and distinguish author replies. Raw observations can inform a comparable baseline but cannot prove causality. Do not use synthetic benchmark posts as the user's audience history.
+5. Prepare a platform-native package and proposed distribution. Creating or scoring a draft is not authorization to publish, schedule, send DMs, or post comments.
+6. Record actual 48-hour and seven-day results in the existing performance tracker. Compare like formats and objectives. Do not calculate percentage improvement from a zero baseline or invent unavailable metrics.
 
-### Pre-Publish QA & Trial Reel Protocol
-
-1. **Pre-Publish Readiness Check:** Verify hook length (`<=12` words before truncation), zero outbound links in root body (move to first comment), compliance disclaimers on regulated topics, and explicit ICP alignment.
-2. **Instagram Trial Reels Testing:** Publish bold new hooks as **Trial Reels** (non-followers only) first. Graduate to the main follower grid when 24-hour 3-second hold `>=62%` and Sends/Reach `>=1.5%`.
-3. **Multi-Year Historical Calibration:** When Meta, LinkedIn (`.xlsx`/`.csv`), and Metricool exports are available, compute Empirical Bayes lifts by format, hook archetype, and UTC publish hour (`2025–2026` regime weighted `2x` over `2021–2024`).
-4. **Metricool Batch Scheduling:** Export weekly pillar calendars to Metricool Bulk CSV (`Text,Date,Time,Network,...`), keeping native comment-reply blocks open for the first 30–120 minutes post-publish.
-
-### Optimization Actions
-
-**If non-follower reach is low:**
-- Add a specific DM-share catalyst (*"Send this to an operator/partner navigating X"*)
-- Shorten video runtime into the `22–38s` completion sweet spot with a seamless loop bridge
-- Align spoken words, burned-in OCR text, and caption around the exact target search phrase (Tri-Modal SEO)
-
-**If follower engagement or inbound leads are low:**
-- Convert list/framework text posts into 8–10 slide `1080×1350` carousels to multiply dwell and saves
-- Remove external links from post bodies and place them in Comment `#1`
-- Increase entity specificity (named neighborhoods, metrics, case benchmarks) to attract ICP buyers and repel low-fit prospects
+**Optimization:** diagnose the opening, progression, payoff, and reader value against observed results. Test one deliberate creative change where practical. Relevant questions, useful tools, and a coherent story are preferable to bait. A numerical bonus does not justify invented numbers, irrelevant local entities, artificial cliffhangers, or a forced CTA.
 
 ---
 
@@ -317,25 +298,25 @@ Instead of guessing, analyze what's working for top creators in your niche:
 
 ## Short-Form Video (TikTok, Reels, Shorts)
 
-Short-form video is the highest-reach format on every major platform. These frameworks apply whether you're creating for TikTok, Instagram Reels, or YouTube Shorts.
+Choose short-form video when motion, demonstration, or an unfolding story serves the audience. Compare it with the account's photo and carousel performance instead of assuming it always has the highest reach.
 
 ### Platform Specs
 
 | Platform | Optimal Length | Aspect Ratio | Key Difference |
 |----------|---------------|--------------|----------------|
-| TikTok | 15-60 sec | 9:16 | Trending sounds, raw/authentic feel |
-| Reels | 15-30 sec | 9:16 | Polished content, rewards saves/shares |
-| Shorts | 30-60 sec | 9:16 | YouTube SEO applies, searchable titles |
+| TikTok | Policy target 15–55s, deep story 62–110s | 9:16 | Clear progression, search alignment when relevant |
+| Reels | Policy target 18–65s | 9:16 | Separate connected and unconnected objectives |
+| Shorts | Policy target 18–35s | 9:16 | Viewed-vs-swiped and completion are separate metrics |
 
 ### The 3-Second Rule
 
-You have 3 seconds to stop the scroll. Every video needs three simultaneous hooks:
+Design the first three seconds to make the subject or promise clear. For a spoken educational video, coordinate:
 
 ```
 [VISUAL HOOK] + [VERBAL HOOK] + [TEXT OVERLAY]
 ```
 
-All three should hit in the first second.
+Use natural source sound and visual action when they tell the story better. Do not invent a spoken hook or label a silent clip Tri-Modal-complete.
 
 ### Video Structures
 
@@ -364,7 +345,7 @@ All three should hit in the first second.
 
 ### Caption & Subtitle Best Practices
 
-Captions increase watch time by 25-40%. Most social video is watched without sound.
+Readable captions support accessibility and comprehension when sound is off. Measure their effect on the actual account instead of promising a fixed watch-time increase.
 
 - **MAX 2 lines** on screen at once
 - **3-5 words per line**
