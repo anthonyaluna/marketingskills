@@ -51,10 +51,14 @@ Current versions of all skills. Agents can compare against local versions to che
 | signup | 2.0.0 | 2026-05-05 |
 | site-architecture | 2.0.0 | 2026-05-05 |
 | sms | 1.0.0 | 2026-05-21 |
-| social | 2.3.1 | 2026-11-17 |
+| social | 2.3.2 | 2026-11-19 |
 | video | 2.1.0 | 2026-07-14 |
 
 ## Recent Changes
+
+### 2.10.3 (2026-11-19)
+
+- **social 2.3.2:** Restore weekly Metricool calendar exports using the current template and its per-network destination columns.
 
 ### 2.10.2 (2026-11-17)
 
