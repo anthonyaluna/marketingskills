@@ -102,6 +102,19 @@
         "Does not invent stats or pad the tactic count"
       ],
       "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "How should I export next week's calendar to a Metricool CSV? One post is LinkedIn-only and another goes to LinkedIn and Facebook. Neither has a first comment. I just need the file for our coordinator.",
+      "expected_output": "Use the current Metricool Calendar template. Preserve its headers and set the network flags for each row. Leave the first comment blank, export UTF-8 CSV, and give the date and time formats for import. If the template cannot be obtained, identify the missing template and provide the planning table.",
+      "assertions": [
+        "Uses the downloaded Calendar template with every original column in order",
+        "Selects only LinkedIn for the first post and both LinkedIn and Facebook for the second using per-network TRUE/FALSE values",
+        "Leaves unused first-comment text empty",
+        "Specifies UTF-8 CSV and matching date and time formats",
+        "Does not import or schedule posts"
+      ],
+      "files": []
     }
   ]
 }

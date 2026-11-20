@@ -2,7 +2,7 @@
 name: social
 description: "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms, or wants to do social listening and engagement triage. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' 'grow my following,' 'TikTok video,' 'Reels,' 'Shorts,' 'video script,' 'video hook,' 'short-form video,' 'create a reel,' 'social listening,' 'brand mentions,' 'competitor monitoring,' 'top posts to comment on,' 'find people asking for,' 'carousel,' 'slide-by-slide,' or 'document post.' Use this for social media content creation, repurposing, scheduling, short-form video scripting, and social listening. For broader content strategy, see content-strategy. For paid ads, see ad-creative. For earned media, see public-relations."
 metadata:
-  version: 2.3.1
+  version: 2.3.2
 ---
 
 # Social Content
@@ -278,6 +278,14 @@ For the Coastline / Anthony Luna v2.1 workflow, read [platform policy v2026.11](
 - Review queue weekly for relevance
 - Leave gaps for spontaneous posts
 - Adjust timing based on performance data
+
+### Export a weekly calendar to Metricool
+
+Start with the current template from **Planning → Calendar → Import CSV → Download template**. Keep every column in its original order. If the template is unavailable, deliver the planning table and identify what is needed to export it.
+
+For each post, set each destination's column to `TRUE` or `FALSE`. For a LinkedIn-only post, set `LinkedIn` to `TRUE` and the other network columns to `FALSE`. Leave `First Comment Text` blank when no comment was supplied.
+
+Export as UTF-8 CSV and record the date and time formats the coordinator should select on import. An export-only request ends with the file. [Metricool calendar CSV guide](https://help.metricool.com/how-to-schedule-posts-in-batch-with-a-csv-file-in-metricool-3zwxj)
 
 ---
 
