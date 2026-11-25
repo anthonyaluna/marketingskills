@@ -5,7 +5,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | Skill | Version | Last Updated |
 |-------|---------|--------------|
 | ab-testing | 2.0.0 | 2026-05-05 |
-| ad-creative | 2.8.0 | 2026-07-14 |
+| ad-creative | 2.8.1 | 2026-11-24 |
 | ai-seo | 2.3.1 | 2026-11-17 |
 | analytics | 2.0.1 | 2026-07-22 |
 | aso | 2.0.0 | 2026-05-05 |
@@ -46,7 +46,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | referrals | 2.0.0 | 2026-05-05 |
 | revops | 2.0.0 | 2026-05-05 |
 | sales-enablement | 2.0.1 | 2026-06-16 |
-| schema | 2.0.0 | 2026-05-05 |
+| schema | 2.0.1 | 2026-11-24 |
 | seo-audit | 2.0.0 | 2026-05-05 |
 | signup | 2.0.0 | 2026-05-05 |
 | site-architecture | 2.0.0 | 2026-05-05 |
@@ -55,6 +55,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.1.0 | 2026-07-14 |
 
 ## Recent Changes
+
+### 2.10.4 (2026-11-24)
+
+- Encode embedded JSON in generated creative review pages and the Next.js structured data example.
 
 ### 2.10.3 (2026-11-19)
 

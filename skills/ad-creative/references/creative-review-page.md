@@ -14,7 +14,7 @@ Don't produce one for a single headline tweak or a quick internal gut-check — 
 
 ## How it's built
 
-The template renders entirely from a JSON block near the top of the file — `<script type="application/json" id="review-data">`. Populate it from your generated concepts and everything else renders — tabs, previews, storyboard, copy panel. You do not edit the render code below the data block. The annotated model below is shown with `//` comments for readability; **the file itself is strict JSON** — no comments, no trailing commas (see "Populating the data safely").
+Prepare a JSON file from the model below. The generator embeds it in the review page and keeps the existing tabs, previews, storyboard, and copy panel. Omit the example comments from the input file.
 
 ### Data model
 
@@ -83,15 +83,13 @@ Never present invented stats, fabricated test results, or stock imagery as the b
 
 ## Populating the data safely
 
-The `DATA` lives in a `<script type="application/json" id="review-data">` block — it's inert data (parsed with `JSON.parse`), not executable code, so a value can never run as script. Two rules when you write it:
-
-- **Valid JSON only** — double-quoted keys and strings, no comments, no trailing commas. (The page shows a clear error banner if the JSON is malformed, so a typo fails loud, not silent.)
-- **Escape `<` as `\u003c` in every text value.** A value literally containing `</script>` would otherwise close the data block early. Since agents write the JSON, apply this escape mechanically to all string values. All values are HTML-escaped again at render time, so this is defense-in-depth, but the source-level escape is the one that matters — do it.
+Use the bundled generator with a separate project JSON file. It serializes keys and values and encodes less-than characters before inserting the data into HTML.
 
 ## Producing and delivering it
 
-1. Copy `assets/creative-review-template.html` into the batch's output folder as `review.html` (e.g. `outputs/YYYY-MM-DD/review.html`).
-2. Replace the `DATA` object with the real project — concepts, frames, copy, grounding. Populate `image` paths for any frames you've rendered (keep them relative to the html file so the folder stays portable).
+1. Save the concepts, frames, copy, and grounding as `project.json`. Keep image paths relative to the output HTML file.
+2. From the skill directory run `node scripts/render-review.cjs project.json review.html`.
+
 3. Verify it renders: open it in a browser, click through every concept tab, both platform and handle toggles, and each frame in the storyboard.
 4. Deliver: hand off the folder (html + `images/`), or host it. For a client link, `vercel deploy` or any static host works — it's a single page with local assets.
 
