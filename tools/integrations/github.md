@@ -140,7 +140,7 @@ node tools/clis/github-prospects.js rate-limit
 - `--enrich`: fetch full profile per user (1 extra request each)
 - `--with-email` / `--with-company` / `--with-blog`: filter to users with these fields set (implies `--enrich`)
 - `--type User|Organization`: filter by account type
-- `--format csv`: output prospecting-ready CSV; default is JSON
+- `--format csv` exports spreadsheet-ready text. Fields with leading formula characters receive an apostrophe prefix. The default JSON format preserves the original values.
 - `--dry-run`: preview the request without sending
 
 ## When to Use
