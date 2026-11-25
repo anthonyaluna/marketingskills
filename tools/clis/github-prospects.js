@@ -130,7 +130,9 @@ function toCSV(users) {
   const cols = ['login', 'name', 'company', 'email', 'blog', 'location', 'bio', 'twitter_username', 'public_repos', 'followers', 'created_at', 'html_url']
   const escape = (v) => {
     if (v === null || v === undefined) return ''
-    const s = String(v).replace(/\r?\n/g, ' ')
+    const text = String(v).replace(/\r\n|[\r\n]/g, ' ')
+    const needsTextPrefix = typeof v === 'string' && (/^\s*[=+@-]/u.test(v) || /^[\t\r\n]/.test(v))
+    const s = needsTextPrefix ? "'" + text : text
     if (s.includes(',') || s.includes('"')) return `"${s.replace(/"/g, '""')}"`
     return s
   }
@@ -251,7 +253,11 @@ async function main() {
   console.log(JSON.stringify(result, null, 2))
 }
 
-main().catch(err => {
-  console.error(JSON.stringify({ error: err.message }))
-  process.exit(1)
-})
+module.exports = { toCSV }
+
+if (require.main === module) {
+  main().catch(err => {
+    console.error(JSON.stringify({ error: err.message }))
+    process.exit(1)
+  })
+}
