@@ -2,18 +2,9 @@
 <!--
   Creative Review Page — a shareable ad-creative approval artifact.
 
-  HOW TO USE (agents): replace the JSON inside <script id="review-data"> below
-  with the real project. Everything else renders from it. The file is
-  self-contained — no build, no network, no dependencies. Open it in a browser,
-  host it on any static host (Vercel/Netlify/GitHub Pages), or hand off the
-  single .html file.
-
-  THE DATA BLOCK IS JSON, NOT JAVASCRIPT:
-    - double-quoted keys and strings, no comments, no trailing commas
-    - it is inert data (parsed with JSON.parse), so a value can never execute
-    - SECURITY: escape every literal "<" in your text values as < so a
-      value like "</script>" can never break out of the tag. All values are
-      also HTML-escaped again at render time.
+  Generate a review page from a project JSON file with scripts/render-review.cjs.
+  The generator encodes the data for this HTML template. Hand the resulting HTML
+  file to a reviewer or open it locally.
 
   DATA SHAPE — see references/creative-review-page.md for the annotated spec.
   Images: each frame's "image" may be a URL, a relative path, or a data URI.
@@ -144,7 +135,7 @@
 </head>
 <body>
 
-<!-- DATA — replace this JSON with your project (see the comment at the top of the file). -->
+<!-- Example project data. The generator replaces this block. -->
 <script type="application/json" id="review-data">
 {
   "project": {
