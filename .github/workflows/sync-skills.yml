@@ -15,17 +15,34 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
-          persist-credentials: true
+          persist-credentials: false
 
       - name: Sync skills
         run: node .github/scripts/sync-skills.js
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_user_name: Coreybot
-          commit_user_email: coreybot+github-actions[bot]@users.noreply.github.com
-          commit_message: "chore: sync skills with marketplace.json, plugin.json, and README"
-          file_pattern: ".claude-plugin/marketplace.json .claude-plugin/plugin.json README.md"
+      - name: Verify and commit generated files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- .claude-plugin/marketplace.json .claude-plugin/plugin.json README.md
+          git diff --exit-code --quiet
+          test -z "$(git ls-files --others --exclude-standard)"
+          git diff --cached --quiet -- . ':(exclude).claude-plugin/marketplace.json' ':(exclude).claude-plugin/plugin.json' ':(exclude)README.md'
+          if ! git diff --cached --quiet; then
+            git -c user.name=Coreybot -c user.email=coreybot+github-actions[bot]@users.noreply.github.com \
+              commit -m "chore: sync skills with marketplace.json, plugin.json, and README"
+          fi
+
+      - name: Push generated commit
+        shell: bash
+        env:
+          SYNC_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if [[ "$(git rev-parse HEAD)" != "$GITHUB_SHA" ]]; then
+            git -c http.followRedirects=false -c credential.helper= \
+              -c 'credential.helper=!f() { if [ "$1" = get ]; then printf "username=x-access-token\npassword=%s\n" "$SYNC_TOKEN"; fi; }; f' \
+              push "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git" HEAD:refs/heads/main
+          fi
