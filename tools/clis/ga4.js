@@ -5,12 +5,8 @@ const DATA_API = 'https://analyticsdata.googleapis.com/v1beta'
 const ADMIN_API = 'https://analyticsadmin.googleapis.com/v1beta'
 const MP_URL = 'https://www.google-analytics.com/mp/collect'
 
-if (!ACCESS_TOKEN) {
-  console.error(JSON.stringify({ error: 'GA4_ACCESS_TOKEN environment variable required' }))
-  process.exit(1)
-}
-
 async function api(method, baseUrl, path, body) {
+  if (!ACCESS_TOKEN) throw new Error('GA4_ACCESS_TOKEN environment variable required')
   if (args['dry-run']) {
     return { _dry_run: true, method, url: `${baseUrl}${path}`, headers: { Authorization: '***', 'Content-Type': 'application/json' }, body: body || undefined }
   }
