@@ -146,6 +146,9 @@ GET https://api.zapier.com/v1/profiles/me
 
 ## Webhooks (Triggers)
 
+Anyone who has a Catch Hook URL can trigger its workflow. Supply the CLI with
+`ZAPIER_WEBHOOK_URL` through your secret manager to keep it out of shell history.
+
 ### Catch Hook (receive data)
 
 Create a "Webhooks by Zapier" trigger to receive data:

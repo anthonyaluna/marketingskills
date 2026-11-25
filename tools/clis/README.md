@@ -52,7 +52,7 @@ Every CLI reads credentials from environment variables:
 | `dub` | `DUB_API_KEY` |
 | `exa` | `EXA_API_KEY` |
 | `g2` | `G2_API_TOKEN` |
-| `ga4` | `GA4_ACCESS_TOKEN` |
+| `ga4` | `GA4_ACCESS_TOKEN`, `GA4_API_SECRET` (Measurement Protocol events) |
 | `google-ads` | `GOOGLE_ADS_TOKEN`, `GOOGLE_ADS_DEVELOPER_TOKEN`, `GOOGLE_ADS_CUSTOMER_ID` |
 | `google-search-console` | `GSC_ACCESS_TOKEN` |
 | `hotjar` | `HOTJAR_CLIENT_ID`, `HOTJAR_CLIENT_SECRET` |
@@ -87,7 +87,7 @@ Every CLI reads credentials from environment variables:
 | `lemlist` | `LEMLIST_API_KEY` |
 | `snov` | `SNOV_CLIENT_ID`, `SNOV_CLIENT_SECRET` |
 | `wistia` | `WISTIA_API_KEY` |
-| `zapier` | `ZAPIER_API_KEY` |
+| `zapier` | `ZAPIER_API_KEY`, `ZAPIER_WEBHOOK_URL` (sending to a Catch Hook) |
 
 ## Security
 

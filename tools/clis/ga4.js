@@ -35,11 +35,18 @@ async function mpApi(measurementId, apiSecret, body) {
   if (args['dry-run']) {
     return { _dry_run: true, method: 'POST', url: `${MP_URL}?${new URLSearchParams({ measurement_id: measurementId, api_secret: '***' })}`, headers: { 'Content-Type': 'application/json' }, body: body || undefined }
   }
-  const res = await fetch(`${MP_URL}?${params}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  })
+  let res
+  try {
+    res = await fetch(`${MP_URL}?${params}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+      redirect: 'error',
+    })
+  } catch {
+    throw new Error('GA4 Measurement Protocol request failed')
+  }
+  if (!res.ok) return { status: res.status, success: false }
   const text = await res.text()
   if (!text) return { status: res.status, success: res.ok }
   try {
@@ -147,7 +154,9 @@ async function main() {
       switch (sub) {
         case 'send': {
           if (!args['measurement-id']) { result = { error: '--measurement-id required' }; break }
-          if (!args['api-secret']) { result = { error: '--api-secret required' }; break }
+          if (args['api-secret'] !== undefined) { result = { error: 'Set GA4_API_SECRET in the environment instead of passing --api-secret' }; break }
+          const apiSecret = process.env.GA4_API_SECRET
+          if (!apiSecret) { result = { error: 'GA4_API_SECRET environment variable required' }; break }
           if (!args['client-id']) { result = { error: '--client-id required' }; break }
           if (!args['event-name']) { result = { error: '--event-name required' }; break }
           let eventParams = {}
@@ -165,7 +174,7 @@ async function main() {
               params: eventParams,
             }],
           }
-          result = await mpApi(args['measurement-id'], args['api-secret'], body)
+          result = await mpApi(args['measurement-id'], apiSecret, body)
           break
         }
         default:
@@ -180,7 +189,7 @@ async function main() {
           reports: 'reports run --property <id> [--start-date <date>] [--end-date <date>] [--dimensions <dims>] [--metrics <metrics>]',
           realtime: 'realtime run --property <id> [--dimensions <dims>] [--metrics <metrics>]',
           conversions: 'conversions [list|create] --property <id> [--event-name <name>]',
-          events: 'events send --measurement-id <id> --api-secret <secret> --client-id <id> --event-name <name> [--params <json>]',
+          events: 'events send --measurement-id <id> --client-id <id> --event-name <name> [--params <json>] (set GA4_API_SECRET)',
         }
       }
   }
