@@ -3,12 +3,8 @@
 const API_KEY = process.env.ZAPIER_API_KEY
 const BASE_URL = 'https://api.zapier.com/v1'
 
-if (!API_KEY) {
-  console.error(JSON.stringify({ error: 'ZAPIER_API_KEY environment variable required' }))
-  process.exit(1)
-}
-
 async function api(method, path, body) {
+  if (!API_KEY) throw new Error('ZAPIER_API_KEY environment variable required')
   if (args['dry-run']) {
     return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { 'X-API-Key': '***', 'Content-Type': 'application/json' }, body: body || undefined }
   }
@@ -30,13 +26,19 @@ async function api(method, path, body) {
 
 async function webhookPost(url, data) {
   if (args['dry-run']) {
-    return { _dry_run: true, method: 'POST', url, headers: { 'Content-Type': 'application/json' }, body: data || undefined }
+    return { _dry_run: true, method: 'POST', url: '[redacted webhook URL]', headers: { 'Content-Type': 'application/json' }, body: data || undefined }
   }
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  })
+  let res
+  try {
+    res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+      redirect: 'error',
+    })
+  } catch {
+    throw new Error('Zapier Catch Hook request failed')
+  }
   const text = await res.text()
   try {
     return JSON.parse(text)
@@ -123,8 +125,9 @@ async function main() {
       switch (sub) {
         case 'send': {
           // Sends a POST to a Zapier webhook catch hook URL (e.g. https://hooks.zapier.com/hooks/catch/...)
-          if (!args.url) { result = { error: '--url required' }; break }
-          if (!args.url.startsWith('https://')) { result = { error: '--url must use https://' }; break }
+          const hookUrl = args.url ?? process.env.ZAPIER_WEBHOOK_URL
+          if (!hookUrl) { result = { error: 'ZAPIER_WEBHOOK_URL or --url required' }; break }
+          if (typeof hookUrl !== 'string' || !hookUrl.startsWith('https://')) { result = { error: 'Webhook URL must use https://' }; break }
           if (!args.data) { result = { error: '--data required (JSON string)' }; break }
           let data
           try {
@@ -133,7 +136,7 @@ async function main() {
             result = { error: 'Invalid JSON for --data' }
             break
           }
-          result = await webhookPost(args.url, data)
+          result = await webhookPost(hookUrl, data)
           break
         }
         default:
@@ -148,7 +151,7 @@ async function main() {
           zaps: 'zaps [list|get|on|off] [--id <zap_id>]',
           tasks: 'tasks [list] --zap-id <zap_id>',
           profile: 'profile [me]',
-          hooks: 'hooks [send] --url <webhook_url> --data <json>',
+          hooks: 'hooks send --data <json> (set ZAPIER_WEBHOOK_URL)',
         },
       }
   }
